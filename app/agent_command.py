@@ -9,7 +9,7 @@ if len(sys.argv) != 2:
     print("Usage: agent_command.py COMMAND")
 
 # Set the API endpoint URL
-url = 'http://localhost:5000/api/execute'
+url = 'http://192.168.56.1:5000/api/execute'
 
 # Set the command to be executed
 command = sys.argv[1]
