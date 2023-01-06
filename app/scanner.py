@@ -7,6 +7,7 @@
 #REG.DET.2
 #from sigma_handler import *
 import os
+import sys
 detection_rules = __import__('detection-rules')
 
 def extract_events(log_file):
@@ -28,8 +29,16 @@ def extract_event_data(line):
         event_data = None
     return event_data
 
-example_events = extract_events('../log.txt')
-for event in example_events:
-    print(detection_rules.example_rule(event))
+if len(sys.argv) != 3:
+    print("Usage: python3 scanner.py OPTION(python or sigma) PATH")
+    sys.exit(1)
 
-os.system('cd ../Zircolite; python3 zircolite.py --events LM_NewShare_Added_Sysmon_12_13.evtx --rules rules/rules_linux.json')
+match sys.argv[1]:
+    case "python":
+        example_events = extract_events(sys.argv[2])
+        for event in example_events:
+            print(detection_rules.example_rule(event))
+    case "sigma":
+        os.system('cd ../Zircolite; python3 zircolite.py --events '+sys.argv[2]+' --rules rules/rules_linux.json')
+    case other:
+        print("Options: python or sigma")

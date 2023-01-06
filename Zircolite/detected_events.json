@@ -35,7 +35,7 @@
       "Task": 13,
       "SystemTime": "2020-10-13T23:06:02.889794Z",
       "Version": 2,
-      "OriginalLogfile": "LM_NewShare_Added_Sysmon_12_13.evtx-0UO6NCUO.json"
+      "OriginalLogfile": "LM_NewShare_Added_Sysmon_12_13.evtx-AAKDE0UJ.json"
     },
     {
       "row_id": 2,
@@ -59,7 +59,7 @@
       "Task": 12,
       "SystemTime": "2020-10-13T23:06:02.889860Z",
       "Version": 2,
-      "OriginalLogfile": "LM_NewShare_Added_Sysmon_12_13.evtx-0UO6NCUO.json"
+      "OriginalLogfile": "LM_NewShare_Added_Sysmon_12_13.evtx-AAKDE0UJ.json"
     },
     {
       "row_id": 3,
@@ -84,7 +84,7 @@
       "Task": 13,
       "SystemTime": "2020-10-13T23:06:02.889886Z",
       "Version": 2,
-      "OriginalLogfile": "LM_NewShare_Added_Sysmon_12_13.evtx-0UO6NCUO.json"
+      "OriginalLogfile": "LM_NewShare_Added_Sysmon_12_13.evtx-AAKDE0UJ.json"
     }
   ]
 },

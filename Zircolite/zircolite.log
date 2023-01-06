@@ -128,3 +128,47 @@ Finished in 0 seconds
 2023-01-06 18:18:54 INFO     [+] Cleaning
 2023-01-06 18:18:54 INFO     
 Finished in 0 seconds
+2023-01-06 18:35:54 INFO     
+    ███████╗██╗██████╗  ██████╗ ██████╗ ██╗     ██╗████████╗███████╗
+    ╚══███╔╝██║██╔══██╗██╔════╝██╔═══██╗██║     ██║╚══██╔══╝██╔════╝
+      ███╔╝ ██║██████╔╝██║     ██║   ██║██║     ██║   ██║   █████╗
+     ███╔╝  ██║██╔══██╗██║     ██║   ██║██║     ██║   ██║   ██╔══╝
+    ███████╗██║██║  ██║╚██████╗╚██████╔╝███████╗██║   ██║   ███████╗
+    ╚══════╝╚═╝╚═╝  ╚═╝ ╚═════╝ ╚═════╝ ╚══════╝╚═╝   ╚═╝   ╚══════╝
+   -= Standalone SIGMA Detection tool for EVTX/Auditd/Sysmon Linux =-
+    
+2023-01-06 18:35:54 INFO     [+] Checking prerequisites
+2023-01-06 18:35:54 INFO     [+] Extracting EVTX Using 'tmp-E02PCVXS' directory 
+2023-01-06 18:35:54 INFO     [+] Processing EVTX
+2023-01-06 18:35:54 INFO     [+] Creating model
+2023-01-06 18:35:54 INFO     [+] Inserting data
+2023-01-06 18:35:54 INFO     [+] Cleaning unused objects
+2023-01-06 18:35:54 INFO     [+] Loading ruleset from : rules/rules_linux.json
+2023-01-06 18:35:54 INFO     [+] Executing ruleset - 118 rules
+2023-01-06 18:35:54 DEBUG        - RULE TEST DEEEEEEEZZ [zodyn] : 3 events
+2023-01-06 18:35:54 INFO     [+] Results written in : detected_events.json
+2023-01-06 18:35:54 INFO     [+] Cleaning
+2023-01-06 18:35:54 INFO     
+Finished in 0 seconds
+2023-01-06 18:40:35 INFO     
+    ███████╗██╗██████╗  ██████╗ ██████╗ ██╗     ██╗████████╗███████╗
+    ╚══███╔╝██║██╔══██╗██╔════╝██╔═══██╗██║     ██║╚══██╔══╝██╔════╝
+      ███╔╝ ██║██████╔╝██║     ██║   ██║██║     ██║   ██║   █████╗
+     ███╔╝  ██║██╔══██╗██║     ██║   ██║██║     ██║   ██║   ██╔══╝
+    ███████╗██║██║  ██║╚██████╗╚██████╔╝███████╗██║   ██║   ███████╗
+    ╚══════╝╚═╝╚═╝  ╚═╝ ╚═════╝ ╚═════╝ ╚══════╝╚═╝   ╚═╝   ╚══════╝
+   -= Standalone SIGMA Detection tool for EVTX/Auditd/Sysmon Linux =-
+    
+2023-01-06 18:40:35 INFO     [+] Checking prerequisites
+2023-01-06 18:40:35 INFO     [+] Extracting EVTX Using 'tmp-MEP92OG8' directory 
+2023-01-06 18:40:35 INFO     [+] Processing EVTX
+2023-01-06 18:40:35 INFO     [+] Creating model
+2023-01-06 18:40:35 INFO     [+] Inserting data
+2023-01-06 18:40:35 INFO     [+] Cleaning unused objects
+2023-01-06 18:40:35 INFO     [+] Loading ruleset from : rules/rules_linux.json
+2023-01-06 18:40:35 INFO     [+] Executing ruleset - 118 rules
+2023-01-06 18:40:35 DEBUG        - RULE TEST DEEEEEEEZZ [zodyn] : 3 events
+2023-01-06 18:40:35 INFO     [+] Results written in : detected_events.json
+2023-01-06 18:40:35 INFO     [+] Cleaning
+2023-01-06 18:40:35 INFO     
+Finished in 0 seconds
