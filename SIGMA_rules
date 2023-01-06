@@ -1,6 +1,0 @@
-rule "Example Rule"
-when
-	event.method = "POST" and
-	event.status_code = "200"
-then
-	alert("Successful POST")
