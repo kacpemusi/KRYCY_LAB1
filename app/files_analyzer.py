@@ -8,54 +8,80 @@ import re
 import tempfile
 
 def search_file(file_path, regex):
-    """Search a file for a regular expression"""
-    pattern = re.compile(regex)
+	"""Search a file for a regular expression"""
+	pattern = re.compile(regex)
 
     # If the file is an EVTX file, convert it to XML first
-    if os.path.splitext(file_path)[1] == '.evtx':
-        # Create a temporary XML file
-        temp_xml_file = tempfile.NamedTemporaryFile(delete=False, suffix='.xml')
-        temp_xml_file.close()
+	if os.path.splitext(file_path)[1] == '.evtx':
+		# Create a temporary XML file
+		temp_xml_file = tempfile.NamedTemporaryFile(delete=False, suffix='.xml')
+		temp_xml_file.close()
 
-        # Convert the EVTX file to XML
-        os.system(f'wevtutil epl {file_path} {temp_xml_file.name}')
+		# Convert the EVTX file to XML
+		os.system(f'wevtutil epl {file_path} {temp_xml_file.name}')
 
-        # Search the XML file
-        with open(temp_xml_file.name, 'r') as f:
-            for line in f:
-                if pattern.search(line):
-                    print(line, end='')
+		# Search the XML file
+		with open(temp_xml_file.name, 'r') as f:
+			for line in f:
+				if pattern.search(line):
+					print(line, end='')
 
         # Delete the temporary XML file
-        os.unlink(temp_xml_file.name)
-    else:
+		os.unlink(temp_xml_file.name)
+	else:
         # If it's not an EVTX file, search the file directly
-        with open(file_path, 'r') as f:
-            for line in f:
-                if pattern.search(line):
-                    print(line, end='')
+		with open(file_path, 'r') as f:
+			for line in f:
+				if pattern.search(line):
+					print(line, end='')
 
 # Check if the number of arguments is correct
-if len(sys.argv) != 3:
-    print("Usage: python files_analyzer.py PATH REGEX")
-    sys.exit(1)
+if len(sys.argv) != 4:
+	print("Usage: python files_analyzer.py PATH re/grep REGEX")
+	sys.exit(1)
 
 # Get the path and the regular expression from the command line arguments
 path = sys.argv[1]
-regex = sys.argv[2]
+fd = 0
+if os.path.isfile(path):
+	fd = 1
+else:
+	if os.path.isdir(path):
+		fd = 2
+	else:
+		print("Use the correct path")
+		sys.exit(1)
+regex = sys.argv[3]
+type = sys.argv[2]
+t = 0
+if type == 're':
+	t = 1
+else:
+	if type == 'grep':
+		t = 2
+if t == 0:
+	print('Use the correct option - re or grep')
+	sys.exit(1)
 
 # File types to search
 file_types = ['.txt', '.xml', '.json', '.pcap', '.evtx']
 
 # Check if the path is a file or a folder
-if os.path.isfile(path):
+if fd == 1:
     # If it's a file, search the file if it's of a specified type
-    if os.path.splitext(path)[1] in file_types:
-        search_file(path, regex)
+	if os.path.splitext(path)[1] in file_types:
+		if t == 1:
+			search_file(path, regex)
+		else:
+			cmd = 'cat ' + path + ' | grep ' + regex
+			os.system(cmd)
 else:
     # If it's a folder, search all the files in the folder
-    for root, dirs, files in os.walk(path):
-        for file in files:
-            if os.path.splitext(file)[1] in file_types:
-                file_path = os.path.join(root, file)
-                search_file(file_path, regex)
+	for root, dirs, files in os.walk(path):
+		for file in files:
+			if os.path.splitext(file)[1] in file_types:
+				file_path = os.path.join(root, file)
+				if t == 1:
+					search_file(file_path, regex)
+				else:
+					cmd = 'cat ' + file_path + ' | grep ' + regex
