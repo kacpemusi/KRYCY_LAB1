@@ -1,16 +1,16 @@
 [{
-  "title": "RULE TEST DEEEEEEEZZ",
+  "title": "RULE TEST BINARY DATA",
   "id": "ajdi",
-  "description": "czaczaczaczaczaczaczaczaczaczaczaczaczaczaczacza",
-  "sigmafile": "hyhyhy.yml",
+  "description": "Binary Data found",
+  "sigmafile": "binary_data.yml",
   "sigma": [
-    "SELECT * FROM logs"
+    "SELECT * FROM logs WHERE (Details LIKE 'Binary Data' ESCAPE '\\')"
   ],
-  "rule_level": "zodyn",
+  "rule_level": "high",
   "tags": [
-    "kupa.gowna"
+    "binary_data"
   ],
-  "count": 3,
+  "count": 2,
   "matches": [
     {
       "row_id": 1,
@@ -35,31 +35,7 @@
       "Task": 13,
       "SystemTime": "2020-10-13T23:06:02.889794Z",
       "Version": 2,
-      "OriginalLogfile": "LM_NewShare_Added_Sysmon_12_13.evtx-AAKDE0UJ.json"
-    },
-    {
-      "row_id": 2,
-      "EventType": "CreateKey",
-      "Image": "C:\\Windows\\system32\\svchost.exe",
-      "ProcessGuid": "747F3D96-2910-5F86-0000-00109EA10100",
-      "ProcessId": 3336,
-      "TargetObject": "HKLM\\System\\CurrentControlSet\\Services\\LanmanServer\\Shares\\Security",
-      "UtcTime": "2020-10-13 23:06:02.878",
-      "Channel": "Microsoft-Windows-Sysmon/Operational",
-      "Computer": "MSEDGEWIN10",
-      "EventID": 12,
-      "EventRecordID": 415267,
-      "ThreadID": 4516,
-      "Keywords": "0x8000000000000000",
-      "Level": 4,
-      "Opcode": 0,
-      "Guid": "5770385F-C22A-43E0-BF4C-06F5698FFBD9",
-      "Provider_Name": "Microsoft-Windows-Sysmon",
-      "UserID": "S-1-5-18",
-      "Task": 12,
-      "SystemTime": "2020-10-13T23:06:02.889860Z",
-      "Version": 2,
-      "OriginalLogfile": "LM_NewShare_Added_Sysmon_12_13.evtx-AAKDE0UJ.json"
+      "OriginalLogfile": "LM_NewShare_Added_Sysmon_12_13.evtx-XFJBWPNQ.json"
     },
     {
       "row_id": 3,
@@ -84,7 +60,47 @@
       "Task": 13,
       "SystemTime": "2020-10-13T23:06:02.889886Z",
       "Version": 2,
-      "OriginalLogfile": "LM_NewShare_Added_Sysmon_12_13.evtx-AAKDE0UJ.json"
+      "OriginalLogfile": "LM_NewShare_Added_Sysmon_12_13.evtx-XFJBWPNQ.json"
+    }
+  ]
+},
+{
+  "title": "RULE TEST EVENT TYPE IS CREATE KEY",
+  "id": "idja",
+  "description": "Event type is create key",
+  "sigmafile": "create_key.yml",
+  "sigma": [
+    "SELECT * FROM logs WHERE (EventType LIKE 'CreateKey' ESCAPE '\\')"
+  ],
+  "rule_level": "high",
+  "tags": [
+    "event_type"
+  ],
+  "count": 1,
+  "matches": [
+    {
+      "row_id": 2,
+      "EventType": "CreateKey",
+      "Image": "C:\\Windows\\system32\\svchost.exe",
+      "ProcessGuid": "747F3D96-2910-5F86-0000-00109EA10100",
+      "ProcessId": 3336,
+      "TargetObject": "HKLM\\System\\CurrentControlSet\\Services\\LanmanServer\\Shares\\Security",
+      "UtcTime": "2020-10-13 23:06:02.878",
+      "Channel": "Microsoft-Windows-Sysmon/Operational",
+      "Computer": "MSEDGEWIN10",
+      "EventID": 12,
+      "EventRecordID": 415267,
+      "ThreadID": 4516,
+      "Keywords": "0x8000000000000000",
+      "Level": 4,
+      "Opcode": 0,
+      "Guid": "5770385F-C22A-43E0-BF4C-06F5698FFBD9",
+      "Provider_Name": "Microsoft-Windows-Sysmon",
+      "UserID": "S-1-5-18",
+      "Task": 12,
+      "SystemTime": "2020-10-13T23:06:02.889860Z",
+      "Version": 2,
+      "OriginalLogfile": "LM_NewShare_Added_Sysmon_12_13.evtx-XFJBWPNQ.json"
     }
   ]
 },

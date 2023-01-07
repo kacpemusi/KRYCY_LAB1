@@ -10,6 +10,7 @@
 
 from flask import Flask, request, jsonify
 import subprocess
+import sys
 
 app = Flask(__name__)
 
@@ -25,4 +26,4 @@ def execute():
     return jsonify({'output': output})
 
 if __name__ == '__main__':
-    app.run(host='192.168.56.103', port=5000)
+    app.run(host='10.0.2.15', port=5000)

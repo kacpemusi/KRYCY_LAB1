@@ -2128,20 +2128,37 @@
         "filename": "net_connection_lnx_ngrok_tunnel.yml"
     },
     {
-	"title": "RULE TEST DEEEEEEEZZ",
+	"title": "RULE TEST BINARY DATA",
 	"id": "ajdi",
-	"description": "czaczaczaczaczaczaczaczaczaczaczaczaczaczaczacza",
+	"description": "Binary Data found",
 	"author": "Eydis Nats",
 	"tags": [
-	    "kupa.gowna"
+	    "binary_data"
 	],
 	"falsepositives": [
 	    "Unknown"
 	],
-	"level": "zodyn",
+	"level": "high",
 	"rule": [
-	    "SELECT * FROM logs"
+	    "SELECT * FROM logs WHERE (Details LIKE 'Binary Data' ESCAPE '\\')"
 	],
-	"filename": "hyhyhy.yml"
+	"filename": "binary_data.yml"
+    },
+    {
+	"title": "RULE TEST EVENT TYPE IS CREATE KEY",
+	"id": "idja",
+	"description": "Event type is create key",
+	"author": "Eydis Nats",
+	"tags": [
+	    "event_type"
+	],
+	"falsepositives": [
+	    "Unknown"
+	],
+	"level": "high",
+	"rule": [
+	    "SELECT * FROM logs WHERE (EventType LIKE 'CreateKey' ESCAPE '\\')"
+	],
+	"filename": "create_key.yml"
     }
 ]
