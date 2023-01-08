@@ -3,14 +3,14 @@
 #wypisywanie informacji na CLI
 #na biezaco zapisywanie i modyfikowanie logow z alertami+akcjami wykonywanymi w programie
 #GEN.MGMG.2, GEN.LOG.1
-
+import flask
 from flask import Flask, request
 
 app = Flask(__name__)
 
 @app.route('/send', methods=['POST'])
 def send_data():
-    data = request.data.decode()
+    data = flask.request.get_json()
     print(data)
     return data
 

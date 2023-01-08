@@ -9,3 +9,4 @@ def info_send(data):
     headers = {'Content-Type': 'text/plain'}
     response = requests.post(url, data=data, headers=headers)
 
+info_send("dupa jasia")
