@@ -21,7 +21,7 @@ app = Flask(__name__)
 
 @app.route('/send', methods=['POST'])
 def send_data():
-    data = flask.request.get_json()
+    data = request.data.decode('utf-8')
     print(data)
     return data
 

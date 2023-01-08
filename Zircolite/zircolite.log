@@ -371,3 +371,49 @@ Finished in 0 seconds
 2023-01-07 19:40:59 INFO     [+] Cleaning
 2023-01-07 19:40:59 INFO     
 Finished in 0 seconds
+2023-01-08 15:11:19 INFO     
+    ███████╗██╗██████╗  ██████╗ ██████╗ ██╗     ██╗████████╗███████╗
+    ╚══███╔╝██║██╔══██╗██╔════╝██╔═══██╗██║     ██║╚══██╔══╝██╔════╝
+      ███╔╝ ██║██████╔╝██║     ██║   ██║██║     ██║   ██║   █████╗
+     ███╔╝  ██║██╔══██╗██║     ██║   ██║██║     ██║   ██║   ██╔══╝
+    ███████╗██║██║  ██║╚██████╗╚██████╔╝███████╗██║   ██║   ███████╗
+    ╚══════╝╚═╝╚═╝  ╚═╝ ╚═════╝ ╚═════╝ ╚══════╝╚═╝   ╚═╝   ╚══════╝
+   -= Standalone SIGMA Detection tool for EVTX/Auditd/Sysmon Linux =-
+    
+2023-01-08 15:11:19 INFO     [+] Checking prerequisites
+2023-01-08 15:11:19 INFO     [+] Extracting EVTX Using 'tmp-8TRDVZMQ' directory 
+2023-01-08 15:11:19 INFO     [+] Processing EVTX
+2023-01-08 15:11:19 INFO     [+] Creating model
+2023-01-08 15:11:19 INFO     [+] Inserting data
+2023-01-08 15:11:19 INFO     [+] Cleaning unused objects
+2023-01-08 15:11:19 INFO     [+] Loading ruleset from : rules/rules_linux.json
+2023-01-08 15:11:19 INFO     [+] Executing ruleset - 119 rules
+2023-01-08 15:11:19 DEBUG        - RULE TEST BINARY DATA [high] : 2 events
+2023-01-08 15:11:19 DEBUG        - RULE TEST EVENT TYPE IS CREATE KEY [high] : 1 events
+2023-01-08 15:11:19 INFO     [+] Results written in : detected_events.json
+2023-01-08 15:11:19 INFO     [+] Cleaning
+2023-01-08 15:11:19 INFO     
+Finished in 0 seconds
+2023-01-08 15:11:41 INFO     
+    ███████╗██╗██████╗  ██████╗ ██████╗ ██╗     ██╗████████╗███████╗
+    ╚══███╔╝██║██╔══██╗██╔════╝██╔═══██╗██║     ██║╚══██╔══╝██╔════╝
+      ███╔╝ ██║██████╔╝██║     ██║   ██║██║     ██║   ██║   █████╗
+     ███╔╝  ██║██╔══██╗██║     ██║   ██║██║     ██║   ██║   ██╔══╝
+    ███████╗██║██║  ██║╚██████╗╚██████╔╝███████╗██║   ██║   ███████╗
+    ╚══════╝╚═╝╚═╝  ╚═╝ ╚═════╝ ╚═════╝ ╚══════╝╚═╝   ╚═╝   ╚══════╝
+   -= Standalone SIGMA Detection tool for EVTX/Auditd/Sysmon Linux =-
+    
+2023-01-08 15:11:41 INFO     [+] Checking prerequisites
+2023-01-08 15:11:41 INFO     [+] Extracting EVTX Using 'tmp-6PCESJH6' directory 
+2023-01-08 15:11:41 INFO     [+] Processing EVTX
+2023-01-08 15:11:41 INFO     [+] Creating model
+2023-01-08 15:11:41 INFO     [+] Inserting data
+2023-01-08 15:11:41 INFO     [+] Cleaning unused objects
+2023-01-08 15:11:41 INFO     [+] Loading ruleset from : rules/rules_linux.json
+2023-01-08 15:11:41 INFO     [+] Executing ruleset - 119 rules
+2023-01-08 15:11:41 DEBUG        - RULE TEST BINARY DATA [high] : 2 events
+2023-01-08 15:11:41 DEBUG        - RULE TEST EVENT TYPE IS CREATE KEY [high] : 1 events
+2023-01-08 15:11:41 INFO     [+] Results written in : detected_events.json
+2023-01-08 15:11:41 INFO     [+] Cleaning
+2023-01-08 15:11:41 INFO     
+Finished in 0 seconds

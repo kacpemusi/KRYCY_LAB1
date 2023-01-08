@@ -9,6 +9,7 @@ import re
 import tempfile
 import subprocess
 import logger
+from info_generator import info_send
 
 def search_file(file_path, regex):
 	"""Search a file for a regular expression"""
@@ -37,8 +38,8 @@ def search_file(file_path, regex):
 		with open(file_path, 'r') as f:
 			for line in f:
 				if pattern.search(line):
-					print(line, end='')
-					#answer += line
+					#print(line, end='')
+					answer += line
 	return answer
 
 # Check if the number of arguments is correct
@@ -94,3 +95,4 @@ else:
 					answer += subprocess.check_output(cmd, shell=True).decode('utf-8')
 print(answer)
 logger.log(answer, 'files_analyzer')
+info_send(answer)

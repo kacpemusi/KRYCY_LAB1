@@ -35,7 +35,7 @@
       "Task": 13,
       "SystemTime": "2020-10-13T23:06:02.889794Z",
       "Version": 2,
-      "OriginalLogfile": "LM_NewShare_Added_Sysmon_12_13.evtx-XFJBWPNQ.json"
+      "OriginalLogfile": "LM_NewShare_Added_Sysmon_12_13.evtx-KZPK2LPA.json"
     },
     {
       "row_id": 3,
@@ -60,7 +60,7 @@
       "Task": 13,
       "SystemTime": "2020-10-13T23:06:02.889886Z",
       "Version": 2,
-      "OriginalLogfile": "LM_NewShare_Added_Sysmon_12_13.evtx-XFJBWPNQ.json"
+      "OriginalLogfile": "LM_NewShare_Added_Sysmon_12_13.evtx-KZPK2LPA.json"
     }
   ]
 },
@@ -100,7 +100,7 @@
       "Task": 12,
       "SystemTime": "2020-10-13T23:06:02.889860Z",
       "Version": 2,
-      "OriginalLogfile": "LM_NewShare_Added_Sysmon_12_13.evtx-XFJBWPNQ.json"
+      "OriginalLogfile": "LM_NewShare_Added_Sysmon_12_13.evtx-KZPK2LPA.json"
     }
   ]
 },

@@ -7,6 +7,7 @@ import pyshark as ps
 import re
 import nest_asyncio
 
+
 def rule_http(event):
     if ('method' in event.keys()) and ('status_code' in event.keys()):
         if event['method'] == 'POST' and event['status_code'] == '200': #and (datetime.datetime.fromisoformat(event['ts']).hour > 15 or datetime.datetime.fromisoformat(event['ts']).hour < 8):
@@ -38,6 +39,8 @@ def rule_blacklist(**kwargs):
     description = ''
 
     for pcap_file in kwargs['pcap']:
+        if kwargs['pcap'] == '':
+            break
         traffic = ps.FileCapture(pcap_file)
         ips2 = []
         for packet in traffic:
@@ -47,12 +50,14 @@ def rule_blacklist(**kwargs):
                         description += (f'Alert: {ip} found in {pcap_file}\n')
                         ips2.append(ip)
     for file in kwargs['txt']:
+        if kwargs['txt'] == '':
+            break
         f = open(file, mode='r')
         c = f.read()
         ips = re.findall(r'\b\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3}\b', c)
         for ip in ips:
             if ip in bl_ip:
                 description += (f'Alert: {ip} found in {file}\n')
-                action_alert='remote'
-    return action_alert+' '+description
+                action_alert=''
+    return action_alert+''+description
 

@@ -7,6 +7,7 @@ import sys
 import os
 import pyshark
 import logger
+from info_generator import info_send
 # Check if the number of arguments is correct
 if len(sys.argv) != 3 and len(sys.argv) != 2:
     print("Usage: python pcap_analyzer.py PCAP_FILE [BPF_FILTER]")
@@ -27,3 +28,4 @@ else:
         packets += packet
 print(packets)
 logger.log(packets, 'pcap_handler')
+info_send(packets.encode('utf-8'))

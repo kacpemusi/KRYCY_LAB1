@@ -7,6 +7,7 @@
 #REG.DET.2
 #from sigma_handler import *
 import os
+import subprocess
 import sys
 import logger
 from info_generator import *
@@ -47,6 +48,14 @@ def extract_event_data(line):
     #sys.exit(1)
 answer = ''
 flag = False
+match sys.argv[3]:
+    case 'http':
+        answer +='------------------------------------------------------\n' + 'Scanning using python rule http\n' + '------------------------------------------------------\n'
+    case 'blip':
+        answer +='------------------------------------------------------\n' + 'Scanning using python rule blip\n' + '------------------------------------------------------\n'
+    case 'all':
+        answer +='------------------------------------------------------\n' + 'Scanning using python rule http\n' + '------------------------------------------------------\n'
+l = [sys.argv[2]]
 match sys.argv[1]:
     case "python":
         example_events = extract_events(sys.argv[2])
@@ -55,34 +64,38 @@ match sys.argv[1]:
                 case "http":
                     if detection_rules.rule_http(event) != (' '):
                         #print(detection_rules.rule_http(event))
-                        answer += '------------------------------------------------------\n' + 'Scanning using python rule http\n' + '------------------------------------------------------\n' + detection_rules.rule_http(event) + '\n'
-			print(answer)
-			info_send(detection_rules.rule_http(event))
+                        answer += detection_rules.rule_http(event) + '\n'
+                        #print(answer)
+			#info_send(detection_rules.rule_http(event))
                 #case "dns":
                 #    if detection_rules.rule_dns(event) != (' '):
                 #        print(detection_rules.rule_dns(event))
 		#	answer += 
                 #        info_send(detection_rules.rule_dns(event))
                 case "all":
-                    if detection_rules.rule_http(event) != (' '):
+                    flag = True
+                    if detection_rules.rule_http(event) != (' '):       
                         #print(detection_rules.rule_http(event))
-                        answer += '------------------------------------------------------\n' + 'Scanning using python rule http\n' + '------------------------------------------------------\n' + detection_rules.rule_http(event) + '\n'
-			#info_send(detection_rules.rule_http(event))
-                        flag = True
+                        answer += detection_rules.rule_http(event) + '\n'
+		        #info_send(detection_rules.rule_http(event))
                 case "blip":
-                    answer += '------------------------------------------------------\n' + 'Scanning using python rule blip\n' + '------------------------------------------------------\n' + detection_rules.rule_blacklist(pcap=['/home/omegalul/Desktop/dupa.pcapng'],txt=['dns.txt']) + '\n'
-                    print(answer)
+                    answer += detection_rules.rule_blacklist(pcap=['/home/omegalul/Desktop/dupa.pcapng'],txt=[sys.argv[2]]) + '\n'
+                    #print(answer)
+                    break
                 case other:
                     print("Usage: python3 scanner.py python PATH RULE_OPTION(http, dns or all)")
                     sys.exit(1)
 
     case "sigma":
-	cmd = 'cd ../Zircolite; python3 zircolite.py --events '+sys.argv[2]+' --rules '+sys.argv[3]
-        answer = subprocess.check_output(cmd,shell=True).decode('utf-8')
-	print(answer)
+        cmd = 'cd ../Zircolite; python3 zircolite.py --events '+sys.argv[2]+' --rules '+sys.argv[3]
+        answer +='------------------------------------------------------\n' + 'Scanning using sigma rules\n' + '------------------------------------------------------\n'+subprocess.check_output(cmd,shell=True).decode('utf-8')
+        #print(answer)
     case other:
         print("Options: python or sigma")
+
 if flag:
-    answer += '------------------------------------------------------\n' + 'Scanning using python rule blip\n' + '------------------------------------------------------\n' + detection_rules.rule_blacklist(pcap=['/home/omegalul/Desktop/dupa.pcapng'],txt=['dns.txt']) + '\n'
-    print(answer)
+    answer += '------------------------------------------------------\n' + 'Scanning using python rule blip\n' + '------------------------------------------------------\n' + detection_rules.rule_blacklist(pcap=['/home/omegalul/Desktop/dupa.pcapng'],txt=[sys.argv[2]]) + '\n'
+    #print(answer)
+print(answer)
 logger.log(answer,'scanner')
+info_send(answer)

@@ -8,5 +8,3 @@ def info_send(data):
     url = 'http://localhost:5001/send'
     headers = {'Content-Type': 'text/plain'}
     response = requests.post(url, data=data, headers=headers)
-
-info_send("dupa jasia")
