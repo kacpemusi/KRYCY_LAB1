@@ -16,9 +16,9 @@ url = 'http://10.0.2.15:5000/api/execute'
 match sys.argv[1]:
     case 'pcap':
         path = '/var/log/pcap_agent/'+datetime.now().strftime("%d-%m-%Y-%H:%M:%S")+'.pcap'
-        command = 'tshark -w '+path+' -i '+sys.argv[2]+' -a duration:'+sys.argv[3]+'; sleep 0.5; sshpass -p PASSWORD scp '+path+' omegalul@10.0.2.15:/home/omegalul/Desktop/pcaps/'
+        command = 'tshark -w '+path+' -i '+sys.argv[2]+' -a duration:'+sys.argv[3]+'; sleep 0.5; sshpass -p PW scp '+path+' omegalul@10.0.2.15:/home/omegalul/Desktop/pcaps/'
     case 'download':
-        command = 'sshpass -p PASSWORD scp /var/log/logs_agent/'+sys.argv[2]+' omegalul@10.0.2.15:/home/omegalul/Desktop/logs/'
+        command = 'sshpass -p PW scp /var/log/logs_agent/'+sys.argv[2]+' omegalul@10.0.2.15:/home/omegalul/Desktop/logs/'
     case 'execute':
         command = sys.argv[2]
     case 'list':

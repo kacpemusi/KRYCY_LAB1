@@ -79,7 +79,7 @@ match sys.argv[1]:
                         answer += detection_rules.rule_http(event) + '\n'
 		        #info_send(detection_rules.rule_http(event))
                 case "blip":
-                    answer += detection_rules.rule_blacklist(pcap=['/home/omegalul/Desktop/dupa.pcapng'],txt=[sys.argv[2]]) + '\n'
+                    answer += detection_rules.rule_blacklist(pcap=['/home/omegalul/Desktop/test.pcapng'],txt=[sys.argv[2]]) + '\n'
                     #print(answer)
                     break
                 case other:
@@ -94,7 +94,7 @@ match sys.argv[1]:
         print("Options: python or sigma")
 
 if flag:
-    answer += '------------------------------------------------------\n' + 'Scanning using python rule blip\n' + '------------------------------------------------------\n' + detection_rules.rule_blacklist(pcap=['/home/omegalul/Desktop/dupa.pcapng'],txt=[sys.argv[2]]) + '\n'
+    answer += '------------------------------------------------------\n' + 'Scanning using python rule blip\n' + '------------------------------------------------------\n' + detection_rules.rule_blacklist(pcap=['/home/omegalul/Desktop/test.pcapng'],txt=[sys.argv[2]]) + '\n'
     #print(answer)
 print(answer)
 logger.log(answer,sys.argv[1])

@@ -50,7 +50,9 @@ cli.add_command(agent_pcap)
 @cli.command()
 @click.option('--name','-n',required=True, help='Name of the file to be downloaded')
 def agent_download(name):
-    os.system('python3 agent_command.py download '+name)
+    if name == '':
+        name ='*'
+    os.system('python3 agent_command.py download \''+name+'\'')
 cli.add_command(agent_download)
 
 @cli.command()
