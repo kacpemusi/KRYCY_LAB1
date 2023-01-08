@@ -83,7 +83,7 @@ match sys.argv[1]:
                     #print(answer)
                     break
                 case other:
-                    print("Usage: python3 scanner.py python PATH RULE_OPTION(http, dns or all)")
+                    print("Usage: PATH RULE_OPTION(http, blip or all)")
                     sys.exit(1)
 
     case "sigma":
@@ -97,5 +97,5 @@ if flag:
     answer += '------------------------------------------------------\n' + 'Scanning using python rule blip\n' + '------------------------------------------------------\n' + detection_rules.rule_blacklist(pcap=['/home/omegalul/Desktop/dupa.pcapng'],txt=[sys.argv[2]]) + '\n'
     #print(answer)
 print(answer)
-logger.log(answer,'scanner')
+logger.log(answer,sys.argv[1])
 info_send(answer)

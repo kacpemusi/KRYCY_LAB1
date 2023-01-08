@@ -25,7 +25,7 @@ if len(sys.argv) == 3:
 else:
     pcap = pyshark.FileCapture(pcap_file)
     for packet in pcap:
-        packets += packet
+        packets += str(packet)
 print(packets)
 logger.log(packets, 'pcap_handler')
 info_send(packets.encode('utf-8'))

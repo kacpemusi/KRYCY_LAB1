@@ -417,3 +417,72 @@ Finished in 0 seconds
 2023-01-08 15:11:41 INFO     [+] Cleaning
 2023-01-08 15:11:41 INFO     
 Finished in 0 seconds
+2023-01-08 17:45:25 INFO     
+    ███████╗██╗██████╗  ██████╗ ██████╗ ██╗     ██╗████████╗███████╗
+    ╚══███╔╝██║██╔══██╗██╔════╝██╔═══██╗██║     ██║╚══██╔══╝██╔════╝
+      ███╔╝ ██║██████╔╝██║     ██║   ██║██║     ██║   ██║   █████╗
+     ███╔╝  ██║██╔══██╗██║     ██║   ██║██║     ██║   ██║   ██╔══╝
+    ███████╗██║██║  ██║╚██████╗╚██████╔╝███████╗██║   ██║   ███████╗
+    ╚══════╝╚═╝╚═╝  ╚═╝ ╚═════╝ ╚═════╝ ╚══════╝╚═╝   ╚═╝   ╚══════╝
+   -= Standalone SIGMA Detection tool for EVTX/Auditd/Sysmon Linux =-
+    
+2023-01-08 17:45:25 INFO     [+] Checking prerequisites
+2023-01-08 17:45:25 INFO     [+] Extracting EVTX Using 'tmp-ELYG1M00' directory 
+2023-01-08 17:45:25 INFO     [+] Processing EVTX
+2023-01-08 17:45:25 INFO     [+] Creating model
+2023-01-08 17:45:25 INFO     [+] Inserting data
+2023-01-08 17:45:25 INFO     [+] Cleaning unused objects
+2023-01-08 17:45:25 INFO     [+] Loading ruleset from : rules/rules_linux.json
+2023-01-08 17:45:25 INFO     [+] Executing ruleset - 119 rules
+2023-01-08 17:45:25 DEBUG        - RULE TEST BINARY DATA [high] : 2 events
+2023-01-08 17:45:25 DEBUG        - RULE TEST EVENT TYPE IS CREATE KEY [high] : 1 events
+2023-01-08 17:45:25 INFO     [+] Results written in : detected_events.json
+2023-01-08 17:45:25 INFO     [+] Cleaning
+2023-01-08 17:45:25 INFO     
+Finished in 0 seconds
+2023-01-08 17:45:50 INFO     
+    ███████╗██╗██████╗  ██████╗ ██████╗ ██╗     ██╗████████╗███████╗
+    ╚══███╔╝██║██╔══██╗██╔════╝██╔═══██╗██║     ██║╚══██╔══╝██╔════╝
+      ███╔╝ ██║██████╔╝██║     ██║   ██║██║     ██║   ██║   █████╗
+     ███╔╝  ██║██╔══██╗██║     ██║   ██║██║     ██║   ██║   ██╔══╝
+    ███████╗██║██║  ██║╚██████╗╚██████╔╝███████╗██║   ██║   ███████╗
+    ╚══════╝╚═╝╚═╝  ╚═╝ ╚═════╝ ╚═════╝ ╚══════╝╚═╝   ╚═╝   ╚══════╝
+   -= Standalone SIGMA Detection tool for EVTX/Auditd/Sysmon Linux =-
+    
+2023-01-08 17:45:50 INFO     [+] Checking prerequisites
+2023-01-08 17:45:50 INFO     [+] Extracting EVTX Using 'tmp-J7OKIJ9Q' directory 
+2023-01-08 17:45:50 INFO     [+] Processing EVTX
+2023-01-08 17:45:50 INFO     [+] Creating model
+2023-01-08 17:45:50 INFO     [+] Inserting data
+2023-01-08 17:45:50 INFO     [+] Cleaning unused objects
+2023-01-08 17:45:50 INFO     [+] Loading ruleset from : rules/rules_linux.json
+2023-01-08 17:45:50 INFO     [+] Executing ruleset - 119 rules
+2023-01-08 17:45:50 DEBUG        - RULE TEST BINARY DATA [high] : 2 events
+2023-01-08 17:45:50 DEBUG        - RULE TEST EVENT TYPE IS CREATE KEY [high] : 1 events
+2023-01-08 17:45:50 INFO     [+] Results written in : detected_events.json
+2023-01-08 17:45:50 INFO     [+] Cleaning
+2023-01-08 17:45:50 INFO     
+Finished in 0 seconds
+2023-01-08 17:49:27 INFO     
+    ███████╗██╗██████╗  ██████╗ ██████╗ ██╗     ██╗████████╗███████╗
+    ╚══███╔╝██║██╔══██╗██╔════╝██╔═══██╗██║     ██║╚══██╔══╝██╔════╝
+      ███╔╝ ██║██████╔╝██║     ██║   ██║██║     ██║   ██║   █████╗
+     ███╔╝  ██║██╔══██╗██║     ██║   ██║██║     ██║   ██║   ██╔══╝
+    ███████╗██║██║  ██║╚██████╗╚██████╔╝███████╗██║   ██║   ███████╗
+    ╚══════╝╚═╝╚═╝  ╚═╝ ╚═════╝ ╚═════╝ ╚══════╝╚═╝   ╚═╝   ╚══════╝
+   -= Standalone SIGMA Detection tool for EVTX/Auditd/Sysmon Linux =-
+    
+2023-01-08 17:49:27 INFO     [+] Checking prerequisites
+2023-01-08 17:49:27 INFO     [+] Extracting EVTX Using 'tmp-9YM57PQU' directory 
+2023-01-08 17:49:27 INFO     [+] Processing EVTX
+2023-01-08 17:49:27 INFO     [+] Creating model
+2023-01-08 17:49:27 INFO     [+] Inserting data
+2023-01-08 17:49:27 INFO     [+] Cleaning unused objects
+2023-01-08 17:49:27 INFO     [+] Loading ruleset from : rules/rules_linux.json
+2023-01-08 17:49:27 INFO     [+] Executing ruleset - 119 rules
+2023-01-08 17:49:27 DEBUG        - RULE TEST BINARY DATA [high] : 2 events
+2023-01-08 17:49:27 DEBUG        - RULE TEST EVENT TYPE IS CREATE KEY [high] : 1 events
+2023-01-08 17:49:27 INFO     [+] Results written in : detected_events.json
+2023-01-08 17:49:27 INFO     [+] Cleaning
+2023-01-08 17:49:27 INFO     
+Finished in 0 seconds
