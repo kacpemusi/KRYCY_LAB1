@@ -5,6 +5,17 @@
 #GEN.MGMG.2, GEN.LOG.1
 import flask
 from flask import Flask, request
+from datetime import datetime
+import os
+
+def log(data, function_name):
+    file_name = function_name + '-' + datetime.now().strftime("%d-%m-%Y-%H:%M:%S")+'.txt'
+    path = '/var/log/logs/'
+    fp = path+file_name
+    command = 'touch '+ fp
+    os.system(command)
+    with open(fp, 'w') as f:
+        f.write(data)
 
 app = Flask(__name__)
 
